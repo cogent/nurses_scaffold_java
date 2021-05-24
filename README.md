@@ -32,8 +32,14 @@ This app is designed to be from the command line using:
 ./gradlew run --args="--startDate=<yyyy-MM-DD>> --endDate=<yyyy-MM-DD> --filename=<filename>"
 ```
 
-Doing so with no params should print out usage information.
+For example
+
+```
+./gradlew run --args="--startDate=2021-09-09 --endDate=2021-09-10 --filename=src/test/resources/nurses.csv"
+```
+
+Running `./gradlew run` with no arguments will print usage information
 
 ## Tests
 
-You can run tests with `gradle test`. Tests for the scaffold code have been provided.
+You can run tests with `gradle test`, however, there are currently no tests.
