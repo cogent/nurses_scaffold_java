@@ -17,7 +17,7 @@ dependencies {
 }
 
 ext {
-    javaMainClass = "cogent.roster.Roster"
+    javaMainClass = "cogent.roster.Main"
 }
 
 application {

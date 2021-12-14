@@ -1,7 +1,6 @@
 package cogent.roster;
 
 import java.util.Date;
-import java.util.List;
 
 public class Shift {
     public Date getDate() {
@@ -12,7 +11,7 @@ public class Shift {
         return null;
     }
 
-    public List<Nurse> getNurses() {
+    public String[] getNurses() {
         return null;
     }
 }

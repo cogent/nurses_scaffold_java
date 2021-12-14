@@ -6,12 +6,11 @@ public class Main {
 
         try {
             RosterOptions options = cli.parseArgs(args);
-
             System.out.printf(
                     "Calculating roster for %s until %s with %d nurses\n\n",
                     options.getStartDate().toString(),
                     options.getEndDate().toString(),
-                    options.getNurses().size());
+                    options.getNurses().length);
 
             Roster roster = new Roster(options);
             RosterFormatter.printRoster(roster, System.out::println);

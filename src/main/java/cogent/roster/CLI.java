@@ -34,17 +34,14 @@ public class CLI {
         String filename = cmd.getOptionValue("f");
 
         BufferedReader br = new BufferedReader(new FileReader(filename));
-        List<Nurse> nurses = new ArrayList<>();
+        List<String> nurses = new ArrayList<>();
 
         String line;
         while ((line = br.readLine()) != null) {
-            String[] values = line.split(",");
-            nurses.add(new Nurse(values[1], values[0]));
+            nurses.add(line);
         }
 
-        return new RosterOptions(startDate, endDate, nurses);
-
-
+        return new RosterOptions(startDate, endDate, nurses.toArray(String[]::new));
     }
 }
 
