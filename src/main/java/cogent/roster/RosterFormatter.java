@@ -8,7 +8,7 @@ public class RosterFormatter {
     public static void printRoster(Roster roster, Consumer<String> outputRoster) {
 
         for (Shift shift : roster.getShifts()) {
-            String nurses = shift.getNurses().stream().map(nurse -> nurse.getName()).collect(Collectors.joining(", "));
+            String nurses = String.join(", ", shift.getNurses());
 
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
             String date = simpleDateFormat.format(shift.getDate());

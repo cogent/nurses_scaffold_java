@@ -1,14 +1,13 @@
 package cogent.roster;
 
 import java.util.Date;
-import java.util.List;
 
 public class RosterOptions {
     private Date startDate;
     private Date endDate;
-    private List<Nurse> nurses;
+    private String[] nurses;
 
-    public RosterOptions(Date startDate, Date endDate, List<Nurse> nurses) {
+    public RosterOptions(Date startDate, Date endDate, String[] nurses) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.nurses = nurses;
@@ -22,7 +21,7 @@ public class RosterOptions {
         return endDate;
     }
 
-    public List<Nurse> getNurses() {
+    public String[] getNurses() {
         return nurses;
     }
 }
